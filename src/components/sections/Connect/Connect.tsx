@@ -14,17 +14,7 @@ import Button from "@/components/ui/Button";
 import styles from "./Connect.module.css";
 import { useLang } from "@/lib/i18n";
 
-/* Gireesh's own photographs, in the order he supplied them (IMAGE 1–5).
-   `focus` is object-position only: the frames are portrait and two of the
-   photos are landscape, so this keeps him in frame — the images are cropped,
-   never scaled non-uniformly, and their colour is left untouched. */
-const PANELS = [
-  { src: "/images/gallery/g01.jpg", focus: "center", rotate: 26, z: -110, y: -26 },
-  { src: "/images/gallery/g02.jpg", focus: "center", rotate: 13, z: -40, y: -8 },
-  { src: "/images/gallery/g03.jpg", focus: "center", rotate: 0, z: 0, y: 0 },
-  { src: "/images/gallery/g04.jpg", focus: "center", rotate: -13, z: -40, y: -8 },
-  { src: "/images/gallery/g05.jpg", focus: "center", rotate: -26, z: -110, y: -26 },
-];
+
 
 /* Official brand marks, inlined so they inherit size and need no requests.
    Paths are the brands' own glyphs (LinkedIn "in" bug, GitHub mark,
@@ -74,15 +64,7 @@ export function ConnectHero() {
         immediateRender: false,
         scrollTrigger: { trigger: el, start: "top 70%" },
       });
-      gsap.from(`.${styles.panel}`, {
-        y: 90,
-        autoAlpha: 0,
-        duration: 1.1,
-        ease: EASE.outExpo,
-        stagger: { each: 0.08, from: "center" },
-        immediateRender: false,
-        scrollTrigger: { trigger: `.${styles.arc}`, start: "top 82%" },
-      });
+
       gsap.from(`.${styles.socials} > *`, {
         y: 26,
         autoAlpha: 0,
@@ -93,45 +75,7 @@ export function ConnectHero() {
         scrollTrigger: { trigger: `.${styles.socials}`, start: "top 88%" },
       });
 
-      /* idle float — each panel bobs on its own rhythm */
-      gsap.utils.toArray<HTMLElement>(`.${styles.panelInner}`).forEach((p, i) => {
-        gsap.to(p, {
-          y: `+=${6 + (i % 3) * 3}`,
-          duration: 3 + (i % 3) * 0.7,
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
-          delay: i * 0.4,
-        });
-      });
-
-      /* cursor: the whole arc leans, each panel adds its own micro-tilt */
-      const panels = gsap.utils.toArray<HTMLElement>(`.${styles.panel}`);
-      const setters = panels.map((p, i) => ({
-        rx: gsap.quickTo(p, "rotationX", { duration: 0.9, ease: "power3.out" }),
-        add: gsap.quickTo(p, "rotationY", { duration: 0.9, ease: "power3.out" }),
-        base: PANELS[i].rotate,
-      }));
-      const onMove = (e: PointerEvent) => {
-        const r = el.getBoundingClientRect();
-        const cx = ((e.clientX - r.left) / r.width - 0.5) * 2;
-        const cy = ((e.clientY - r.top) / r.height - 0.5) * 2;
-        setters.forEach((s) => {
-          s.add(s.base + cx * 5);
-          s.rx(-cy * 4);
-        });
-      };
-      const onLeave = () => setters.forEach((s) => {
-        s.add(s.base);
-        s.rx(0);
-      });
-      el.addEventListener("pointermove", onMove);
-      el.addEventListener("pointerleave", onLeave);
-
-      return () => {
-        el.removeEventListener("pointermove", onMove);
-        el.removeEventListener("pointerleave", onLeave);
-      };
+      return () => {};
     }, el);
 
     return () => ctx.revert();
@@ -152,29 +96,7 @@ export function ConnectHero() {
         </p>
       </div>
 
-      <div className={styles.arc} aria-hidden="true">
-        {PANELS.map((p, i) => (
-          <div
-            className={styles.panel}
-            key={i}
-            style={
-              {
-                transform: `translate3d(0, ${p.y}px, ${p.z}px) rotateY(${p.rotate}deg)`,
-              } as React.CSSProperties
-            }
-          >
-            <div className={`${styles.panelInner} ${styles.hasPhoto}`}>
-              <img
-                className={styles.photo}
-                src={p.src}
-                alt=""
-                style={{ objectPosition: p.focus }}
-                loading="lazy"
-              />
-            </div>
-          </div>
-        ))}
-      </div>
+
 
       <div className={styles.socials}>
         {SOCIALS.map((s) => (
