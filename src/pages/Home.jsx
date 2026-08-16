@@ -9,7 +9,7 @@ import DesignStack from "@/components/sections/Stack/DesignStack";
 import Work from "@/components/sections/Work/Work";
 import Experience from "@/components/sections/Experience/Experience";
 import Certifications from "@/components/sections/Certifications/Certifications";
-import Gallery from "@/components/sections/Gallery/Gallery";
+
 import { ConnectHero, ConnectForm } from "@/components/sections/Connect/Connect";
 import SingleProject from "@/components/sections/ProjectShowcase/SingleProject";
 
@@ -66,15 +66,11 @@ export default function Home() {
           </Scene>
         ))}
 
-        <Scene order={9 + (projects?.length || 0)} runway={1.6} id="gallery" keepOnMobile>
-          <Gallery />
-        </Scene>
-
-        <Scene order={10 + (projects?.length || 0)} id="contact" keepOnMobile>
+        <Scene order={9 + (projects?.length || 0)} id="contact" keepOnMobile>
           <ConnectHero />
         </Scene>
 
-        <Scene order={11 + (projects?.length || 0)} id="contact-form" keepOnMobile>
+        <Scene order={10 + (projects?.length || 0)} id="contact-form" keepOnMobile>
           <ConnectForm />
         </Scene>
       </main>
