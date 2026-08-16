@@ -149,7 +149,7 @@ export default function About() {
                 alt="Profile" 
               />
             ) : (
-              <img src="/static/dist/images/portrait.png" className={styles.profileImg} alt="Profile" />
+              <img src="/images/portrait.png" className={styles.profileImg} alt="Profile" />
             )}
           </div>
         </div>

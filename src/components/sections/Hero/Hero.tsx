@@ -38,12 +38,12 @@ export default function Hero({ about }: { about?: any }) {
   const { t } = useLang();
 
   const STATS_LEFT = [
-    { n: about?.projects_completed || 20, suffix: "+", key: "stat.projects", icon: "/static/dist/images/icons/projects.png" },
-    { n: about?.years_of_experience || 5, suffix: "+", key: "stat.years", icon: "/static/dist/images/icons/years.png" },
+    { n: about?.projects_completed || 20, suffix: "+", key: "stat.projects", icon: "/images/icons/projects.png" },
+    { n: about?.years_of_experience || 5, suffix: "+", key: "stat.years", icon: "/images/icons/years.png" },
   ];
   const STATS_RIGHT = [
-    { n: about?.countries_worked_with || 10, suffix: "+", key: "stat.countries", icon: "/static/dist/images/icons/countries.png" },
-    { n: about?.client_satisfaction || 100, suffix: "%", key: "stat.satisfaction", icon: "/static/dist/images/icons/satisfaction.png" },
+    { n: about?.countries_worked_with || 10, suffix: "+", key: "stat.countries", icon: "/images/icons/countries.png" },
+    { n: about?.client_satisfaction || 100, suffix: "%", key: "stat.satisfaction", icon: "/images/icons/satisfaction.png" },
   ];
 
   useEffect(() => {
@@ -220,7 +220,7 @@ export default function Hero({ about }: { about?: any }) {
 
           <img
             className={styles.portrait}
-            src="/static/dist/images/ahelan.jpg.png"
+            src="/images/ahelan.jpg.png"
             alt="Ahelan Kumar Reddy — Software Developer"
             width="554"
             height="573"

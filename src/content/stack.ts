@@ -13,16 +13,16 @@ export type Tool = {
 
 export const TOOLS: Tool[] = [
   /* — AI — */
-  { name: "Claude", group: "AI", src: "/static/dist/images/logos/claude.png" },
-  { name: "ChatGPT", group: "AI", src: "/static/dist/images/logos/chatgpt.png" },
+  { name: "Claude", group: "AI", src: "/images/logos/claude.png" },
+  { name: "ChatGPT", group: "AI", src: "/images/logos/chatgpt.png" },
   { name: "Gemini", group: "AI", mono: "Gm", color: "#2C6BD8" },
   { name: "Perplexity", group: "AI", mono: "Px", color: "#1F7A86" },
 
   /* — Design — */
-  { name: "Figma", group: "Design", src: "/static/dist/images/logos/figma.png" },
-  { name: "Framer", group: "Design", src: "/static/dist/images/logos/framer.png" },
-  { name: "Spline", group: "Design", src: "/static/dist/images/logos/spline.png" },
-  { name: "Notion", group: "Design", src: "/static/dist/images/logos/notion.png" },
+  { name: "Figma", group: "Design", src: "/images/logos/figma.png" },
+  { name: "Framer", group: "Design", src: "/images/logos/framer.png" },
+  { name: "Spline", group: "Design", src: "/images/logos/spline.png" },
+  { name: "Notion", group: "Design", src: "/images/logos/notion.png" },
 
   /* — Build — */
   { name: "Cursor", group: "Build", mono: "Cu", color: "#141414" },
@@ -38,8 +38,8 @@ export const TOOLS: Tool[] = [
   { name: "Photoshop", group: "Creative", mono: "Ps", color: "#1E7FC4" },
   { name: "Illustrator", group: "Creative", mono: "Ai", color: "#D97A00" },
   { name: "After Effects", group: "Creative", mono: "Ae", color: "#5C4FE0" },
-  { name: "Midjourney", group: "Creative", src: "/static/dist/images/logos/midjourney.png" },
-  { name: "CapCut", group: "Creative", src: "/static/dist/images/logos/capcut.png" },
+  { name: "Midjourney", group: "Creative", src: "/images/logos/midjourney.png" },
+  { name: "CapCut", group: "Creative", src: "/images/logos/capcut.png" },
   { name: "Runway", group: "Creative", mono: "Rw", color: "#141414" },
   { name: "ElevenLabs", group: "Creative", mono: "11", color: "#141414" },
 ];

@@ -24,8 +24,8 @@ export type Frame = {
 };
 
 export const FRAMES: Frame[] = [
-  { id: "g01", src: "/static/dist/images/gallery/g01.jpg", ar: 1.333, scale: 1.0, y: -10, hero: true },
-  { id: "g02", src: "/static/dist/images/gallery/g02.jpg", ar: 0.75, scale: 0.95, y: 15 },
-  { id: "g03", src: "/static/dist/images/gallery/g03.jpg", ar: 0.574, scale: 1.0, y: -15, hero: true },
-  { id: "g04", src: "/static/dist/images/gallery/g04.jpg", ar: 0.578, scale: 0.9, y: 10 },
+  { id: "g01", src: "/images/gallery/g01.jpg", ar: 1.333, scale: 1.0, y: -10, hero: true },
+  { id: "g02", src: "/images/gallery/g02.jpg", ar: 0.75, scale: 0.95, y: 15 },
+  { id: "g03", src: "/images/gallery/g03.jpg", ar: 0.574, scale: 1.0, y: -15, hero: true },
+  { id: "g04", src: "/images/gallery/g04.jpg", ar: 0.578, scale: 0.9, y: 10 },
 ];

@@ -19,11 +19,11 @@ import { useLang } from "@/lib/i18n";
    photos are landscape, so this keeps him in frame — the images are cropped,
    never scaled non-uniformly, and their colour is left untouched. */
 const PANELS = [
-  { src: "/static/dist/images/gallery/g01.jpg", focus: "center", rotate: 26, z: -110, y: -26 },
-  { src: "/static/dist/images/gallery/g02.jpg", focus: "center", rotate: 13, z: -40, y: -8 },
-  { src: "/static/dist/images/gallery/g03.jpg", focus: "center", rotate: 0, z: 0, y: 0 },
-  { src: "/static/dist/images/gallery/g04.jpg", focus: "center", rotate: -13, z: -40, y: -8 },
-  { src: "/static/dist/images/gallery/g05.jpg", focus: "center", rotate: -26, z: -110, y: -26 },
+  { src: "/images/gallery/g01.jpg", focus: "center", rotate: 26, z: -110, y: -26 },
+  { src: "/images/gallery/g02.jpg", focus: "center", rotate: 13, z: -40, y: -8 },
+  { src: "/images/gallery/g03.jpg", focus: "center", rotate: 0, z: 0, y: 0 },
+  { src: "/images/gallery/g04.jpg", focus: "center", rotate: -13, z: -40, y: -8 },
+  { src: "/images/gallery/g05.jpg", focus: "center", rotate: -26, z: -110, y: -26 },
 ];
 
 /* Official brand marks, inlined so they inherit size and need no requests.
