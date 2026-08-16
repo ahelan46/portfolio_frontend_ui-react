@@ -2,7 +2,7 @@ export const ABOUT = {
   "id": 1,
   "name": "Ahelan V",
   "bio": "I am a passionate web developer with a strong interest in building clean, responsive, and user-friendly web applications. I enjoy working with modern technologies and continuously improving my skills by learning new tools and frameworks. My goal is to create efficient solutions that deliver great user experiences.",
-  "profile_image": "/media/portfolio/Screenshot_2026-08-08_151455_FMA5vN1.png",
+  "profile_image": "/images/ahelan.jpg.png",
   "email": "ahelanv49@gmail.com",
   "phone": "7200673492",
   "location": "",
